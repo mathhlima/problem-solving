@@ -6,10 +6,8 @@ int main(){
     cin >> n;
 
     int quad[n][n];
-    int somaLinha[n];
-    int somaColuna[n];
-    int somaDiag[2];
-    int soma = 0;
+    int somaLinha = 0;
+    int somaColuna = 0;
     int principal = 0;
     int secundaria = 0;
 
@@ -22,36 +20,41 @@ int main(){
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            soma += quad[i][j];
+            somaLinha += quad[i][j];
         }
-        somaLinha[i] = soma;
-        soma = 0;
     }
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            soma += quad[j][i];
+            somaColuna += quad[j][i];
         }
 
-        somaColuna[i] = soma;
-        soma = 0;
     }
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if(i == j){
                 principal += quad[i][j];
-                //somaDiag[0] = soma;
             }
 
             if((i + j) == (n - 1)){
-                //soma += quad[i][j];
+                
                 secundaria += quad[i][j];
             }
         }
     }
 
-    cout << principal << " " << secundaria;
+    /*cout << somaLinha << endl;
+    cout << somaColuna << endl;
+    cout << somaColuna / n;*/
+
+    if(principal == secundaria and somaLinha / n == principal and somaColuna / n == secundaria){
+        cout << principal;
+    } else {
+        cout << -1;
+    }
+
+    
     
 
 }
