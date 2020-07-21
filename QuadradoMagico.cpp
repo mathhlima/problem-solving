@@ -7,9 +7,14 @@ int main(){
 
     int quad[n][n];
     int somaLinha = 0;
+    int somaLinhaAr[n];
+    int linha = 0;
+    int coluna = 0;
     int somaColuna = 0;
+    int somaColunaAr[n];
     int principal = 0;
     int secundaria = 0;
+    int aux = 0;
 
 
     for(int i = 0; i < n; i++){
@@ -22,13 +27,16 @@ int main(){
         for(int j = 0; j < n; j++){
             somaLinha += quad[i][j];
         }
+        somaLinhaAr[i] = somaLinha;
+        somaLinha = 0;
     }
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             somaColuna += quad[j][i];
+            
         }
-
+        
     }
 
     for(int i = 0; i < n; i++){
@@ -44,17 +52,9 @@ int main(){
         }
     }
 
-    /*cout << somaLinha << endl;
-    cout << somaColuna << endl;
-    cout << somaColuna / n;*/
-
-    if(principal == secundaria and somaLinha / n == principal and somaColuna / n == secundaria){
-        cout << principal;
-    } else {
-        cout << -1;
+    for(int i = 0; i < n; i++){
+        cout << somaLinhaAr[i] << endl;
     }
 
     
-    
-
 }
