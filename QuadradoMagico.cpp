@@ -55,7 +55,11 @@ int main(){
         if(somaLinhaAr[i] == somaLinhaAr[i+1]){
             if(somaColunaAr[i] == somaColunaAr[i+1]){
                 if(principal == secundaria){
-                    aux++;
+                    if(principal == somaLinhaAr[i] and principal == somaColunaAr[i]){
+                        if(secundaria == somaLinhaAr[i] and secundaria == somaColunaAr[i]){
+                            aux++;
+                        }
+                    }
                 }
             }
         }
