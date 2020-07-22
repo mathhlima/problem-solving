@@ -4,12 +4,10 @@ using namespace std;
 int main() {
 
     int n;
-    int somaColuna[n];
-    int soma;
-    int somaLinha[n];
-
+    int soma = 0;
     cin >> n;
-
+    int somaColuna[n];
+    int somaLinha[n];
     int xad[n][n];
 
     for(int i = 0; i< n; i ++){
@@ -18,10 +16,11 @@ int main() {
             soma += xad[i][j];
         }
         somaLinha[i] = soma;
+        soma = 0;
     }
 
     for(int i = 0; i < n; i++){
-        cout << somaLinha << endl;
+        cout << somaLinha[i] << endl;
     }
     
     
