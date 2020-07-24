@@ -11,6 +11,7 @@ int main() {
     int xad[n][n];
     int somaL = 0;
     int somaC = 0;
+    int torre = 0;
     for(int i = 0; i< n; i ++){
         for(int j = 0; j < n; j++){
             cin >> xad[i][j];
@@ -18,6 +19,7 @@ int main() {
         }
         somaLinha[i] = soma;
         soma = 0;
+
     }
 
     
@@ -31,6 +33,13 @@ int main() {
     }
 
     for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(xad[i][j] == xad[i][j]){
+                torre = xad[i][j];
+            }
+        }
+    }
+    for(int i = 0; i < n; i++){
         if(somaL < somaLinha[i]){
             somaL = somaLinha[i];
         }
@@ -39,7 +48,9 @@ int main() {
         }
     }
 
-    cout << "oiii numero aqui:" << somaL;
+
+
+    cout << "oiii numero torre aqui :" << somaL;
     
     return 0;
 }
