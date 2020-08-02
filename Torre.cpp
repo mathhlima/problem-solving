@@ -12,6 +12,7 @@ int main() {
     int somaL = 0;
     int somaC = 0;
     int torre = 0;
+    
     for(int i = 0; i< n; i ++){
         for(int j = 0; j < n; j++){
             cin >> xad[i][j];
@@ -19,9 +20,9 @@ int main() {
         }
         somaLinha[i] = soma;
         soma = 0;
-
     }
 
+    soma = 0;
     
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
@@ -50,7 +51,8 @@ int main() {
 
 
 
-    cout << "oiii numero torre aqui :" << somaL;
+    cout << "soma linha " << somaL << endl;
+    cout << "soma coluna " << somaC;
     
     return 0;
 }
